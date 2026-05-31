@@ -24,7 +24,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <div className="min-h-screen bg-slate-50 pt-16">
+      <div className="min-h-screen bg-slate-100 pt-16 text-slate-900">
         <Routes>
           <Route path="/login" element={!user ? <Login /> : <Navigate to={user.role === 'admin' ? '/admin' : '/vehicles'} />} />
           <Route path="/register" element={!user ? <Register /> : <Navigate to={user.role === 'admin' ? '/admin' : '/vehicles'} />} />
